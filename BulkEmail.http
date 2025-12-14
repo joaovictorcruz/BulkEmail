@@ -1,0 +1,6 @@
+@BulkEmail_HostAddress = http://localhost:5246
+
+GET {{BulkEmail_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
