@@ -1,4 +1,6 @@
 using BulkEmail.Producer.Messaging;
+using BulkEmail.Producer.Services;
+using BulkEmail.Producer.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<RabbitMqPublisher>();
-
+builder.Services.AddScoped<ICampaignService, CampaignService>();
 
 var app = builder.Build();
 

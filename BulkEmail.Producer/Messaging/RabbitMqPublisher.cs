@@ -15,7 +15,9 @@ namespace BulkEmail.Producer.Messaging
         {
             var factory = new ConnectionFactory
             {
-                HostName = "localhost"
+                HostName = "localhost",
+                UserName = "user",
+                Password = "user"
             };
 
             _connection = factory.CreateConnectionAsync().GetAwaiter().GetResult();
